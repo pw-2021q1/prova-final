@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-between">
+    <h2>Nova postagem</h2>
+    <div>
+        <button type="submit" form="add-form" class="btn btn-primary"><i class="fas fa-save"></i> Salvar</button>
+        <a href="/">
+            <button class="btn btn-primary"><i class="fas fa-undo-alt"></i> Cancelar</button>
+        </a>
+    </div>
+</div>
+
+<form id="add-form" action="/add" method="post" enctype="multipart/form-data">
+    {{> post-form }}
+</form>

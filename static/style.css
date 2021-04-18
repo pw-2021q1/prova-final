@@ -1,0 +1,27 @@
+:root {
+    --margin-x: 8em;
+    --bg-color: beige;
+}
+
+header {
+    background-color: var(--bg-color);
+    font-family: 'Architects Daughter', cursive;
+}
+
+.logo {
+    width: var(--margin-x);
+}
+
+
+nav.toolbar {
+    background-color: var(--bg-color);
+}
+
+.img-container {
+    width: 30%;
+}
+
+footer {
+    background-color: var(--bg-color);
+}
+

@@ -1,0 +1,12 @@
+{{#if (equals messages.type "login") }}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    Bem vindo, {{messages.name}}!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+{{#if (equals messages.type "logout") }}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    Você está deslogado. Até mais!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}

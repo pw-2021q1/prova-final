@@ -1,0 +1,12 @@
+{{#if (equals type "invalid_login")}}
+    <h3>Ops! Encontramos um erro.</h3>
+    <p>Desculpe. Não conseguimos autenticar você com os dados informados. Verifique e tente novamente.</p>
+{{/if}}
+{{#if (equals type undefined)}}
+    <h3>Ops! Encontramos um erro.</h3>
+    <p>Desculpe. Detectamos um erro com razão desconhecida. 
+        Nossos administradores já foram notificados.</p>
+{{/if}}
+<a href="/">Back</a>
+
+    

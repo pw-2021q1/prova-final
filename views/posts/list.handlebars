@@ -1,0 +1,37 @@
+{{> login-flash }}
+
+<div class="d-flex justify-content-end mb-5">
+    {{#if authenticated}}
+        <a href="/add">
+            <button type="button" class="btn btn-primary add-btn">
+                <i class="fas fa-plus-square"></i> Nova postagem
+            </button>
+        </a>
+    {{/if}}
+</div>
+
+<table class="table list">
+    {{#each postAuthorList as |postAuthor|}}
+        <tr>
+            <td class="container-fluid">
+                <div class="row">
+                    <div class="col-2">
+                        {{#if (isEmpty postAuthor.post.cover)}}
+                        <img class="img-thumbnail" src="/static/img/general_post_cover.png" alt="">
+                        {{else}}
+                        <img class="img-thumbnail" src="/picture/{{postAuthor.post.cover}}" alt="">
+                        {{/if}}
+                    </div>
+                    <div class="col">
+                        <h5><a href="/post/{{postAuthor.post.id}}">{{postAuthor.post.title}}</a></h5>
+                        <p>Por <a href="mailto:{{postAuthor.author.email}}">{{postAuthor.author.fullname}}</a>, em {{formatDate postAuthor.post.date}} <br>
+                        {{postAuthor.post.location}}
+                        </p>
+                        <p>{{shorten postAuthor.post.content}}</p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    {{/each}}
+
+</table>

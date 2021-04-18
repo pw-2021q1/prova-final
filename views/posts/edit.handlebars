@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-between">
+    <h2>Editar postagem</h2>
+    <div>
+        <button type="submit" form="edit-form" class="btn btn-primary"><i class="fas fa-save"></i> Salvar</button>
+        <a href="/post/{{post.id}}">
+            <button class="btn btn-primary"><i class="fas fa-undo-alt"></i> Cancelar</button>
+        </a>
+        <button type="submit" form="remove-form" class="btn btn-danger ms-5"><i class="fas fa-trash-alt"></i>
+            Remover</button>
+    </div>
+</div>
+
+<form id="edit-form" action="/edit" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="{{post.id}}">
+    {{> post-form }}
+</form>
+
+<form id="remove-form" action="/remove" method="post">
+    <input type="hidden" name="id" value="{{post.id}}">
+</form>

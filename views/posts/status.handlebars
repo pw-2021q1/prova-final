@@ -1,0 +1,49 @@
+{{#if (equals type "list_error")}}
+    <h3>Ops! Encontramos um erro.</h3>
+    <p>Desculpe. Não conseguimos listar as postagens. Tente novamente depois.</p>
+{{/if}}
+{{#if (equals type "unknown_post")}}
+    <h3>Ops! Encontramos um erro.</h3>
+    <p>Desculpe. Não encontramos a postagem com o id {{params.id}} em nossos registros.</p>
+{{/if}}
+{{#if (equals type "invalid_form_error")}}
+    <h3>Ops! Encontramos um erro.</h3>
+    <p>Desculpe. Alguns dos dados enviados são inválidos. Por favor, tente novamente.</p>
+{{/if}}
+{{#if (equals type "post_add_error")}}
+    <h3>Ops! Encontramos um erro.</h3>
+    <p>Descuple. Não conseguimos armazenar a postagem.</p>
+{{/if}}
+{{#if (equals type "post_add_success")}}
+    <h3>Tudo OK!</h3>
+    <p>Nova postagem foi adicionada com sucesso.</p>
+{{/if}}
+{{#if (equals type "post_edit_error")}}
+    <h3>Ops! Encontramos um erro.</h3>
+    <p>Desculpe. Não foi possível atualizar a postagem.</p>
+{{/if}}
+{{#if (equals type "post_edit_success")}}
+    <h3>Tudo OK!</h3>
+    <p>A postagem foi atualizada com sucesso.</p>
+{{/if}}
+{{#if (equals type "post_remove_error")}}
+    <h3>Ops! Encontramos um erro.</h3>
+    <p>Desculpe. Não conseguimos remover a postagem.</p>
+{{/if}}
+{{#if (equals type "post_remove_success")}}
+    <h3>Tudo OK!</h3>
+    <p>A postagem foi removida com sucesso.</p>
+{{/if}}
+{{#if (equals type "post_edit_load_error")}}
+    <h3>Ops! Encontramos um erro.</h3>
+    <p>Desculpe. Não conseguimos encontrar uma postagem com o identificador informado.</p>
+{{/if}}
+{{#if (equals type undefined)}}
+    <h3>Ops! Encontramos um erro.</h3>
+    <p>Desculpe. Encontramos um erro com razão desconhecida. 
+        Nossos administradores já foram notificados.</p>
+{{/if}}
+
+<a href="/">Voltar</a>
+
+    

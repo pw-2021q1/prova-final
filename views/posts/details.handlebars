@@ -1,0 +1,27 @@
+
+<div class="d-flex justify-content-between">
+    <h3>{{postAuthor.post.title}}</h3>
+    {{#if authenticated}}
+        <a href="/edit/{{postAuthor.post.id}}">
+            <button type="button" class="btn btn-primary flex-row-reverse">
+                <i class="fas fa-edit"></i> Editar postagem
+            </button>
+        </a>
+    {{/if}}
+</div>
+
+<div>
+    <p><em> <a href="mailto:{{postAuthor.author.email}}"></a>{{postAuthor.author.fullname}}</em></p>
+    <p>
+    {{formatDate postAuthor.post.date}} <br>
+    {{postAuthor.post.location}}
+    </p>
+
+    {{#if (isEmpty postAuthor.post.cover)}}
+    <img src="/static/img/general_note_cover.png" alt="" class="w-25 float-start pe-3">
+    {{else}}
+    <img src="/picture/{{postAuthor.post.cover}}" alt="" class="w-25 float-start pe-3">
+    {{/if}}
+
+    <p>{{postAuthor.post.content}}</p>
+</div>
