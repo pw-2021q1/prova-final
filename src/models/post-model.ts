@@ -105,7 +105,7 @@ export class PostDAO {
      */
     async findById(id: number): Promise<Post> {
         // TODO
-        return null
+        return new Post("", "", "", "")
     }
 
     /**
