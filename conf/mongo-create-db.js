@@ -1,5 +1,5 @@
 
-// Mongoshell script to create an empty profiles db
+// Mongoshell script to create an empty blog db
 
 db = connect('127.0.0.1:27017/blog-system');
 db.dropDatabase();
@@ -35,7 +35,7 @@ function nextAuthorId() {
  */
 db.createCollection('posts');
 
-db.profiles.createIndex({'id': 1}, {unique: true});
+db.posts.createIndex({'id': 1}, {unique: true});
 
 db.posts.insertOne({
     id: nextPostId(),
