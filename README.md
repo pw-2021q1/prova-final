@@ -1,5 +1,3 @@
-# Prova final
-
 ## Tema: *General Blog System*
 
 Sistema de blog simplificado. O sistema possui as seguintes funcionalidades:
